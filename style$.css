@@ -1,0 +1,63 @@
+body {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #3151f1;
+	background-color: #0f0f0f;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 800px;
+	padding: 20px;
+}
+
+.section {
+	margin-bottom: 30px;
+}
+
+.section h2 {
+	margin-bottom: 10px;
+	font-size: 24px;
+}
+
+.section p {
+	margin-bottom: 10px;
+}
+
+.section img {
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 10px;
+}
+.work-summary {
+	margin-bottom: 30px;
+  }
+  
+  .work-summary h2 {
+	font-size: 24px;
+	margin-bottom: 10px;
+  }
+  
+  .work-summary table {
+	width: 100%;
+	border-collapse: collapse;
+  }
+  
+  .work-summary th,
+  .work-summary td {
+	padding: 10px;
+	text-align: left;
+	border-bottom: 1px solid #ccc;
+  }
+  
+  .work-summary th {
+	font-weight: bold;
+  }
+  
+  .work-summary tr:last-child td {
+	border-bottom: none;
+  }
+  
