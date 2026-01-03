@@ -96,8 +96,36 @@ section {
 
 section h2 {
     color: var(--secondary);
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     font-size: 1.6rem;
+}
+
+/* ---------- INTRO / SERVICES SECTION FIX ---------- */
+.intro-section {
+    /* intentionally empty to preserve section geometry */
+}
+
+.intro-section h2 {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.intro-section p {
+    max-width: 680px;
+    margin: 0 auto 16px;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.intro-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* Emphasized lead paragraph */
+.intro-section .lead {
+    font-size: 1.15rem;
+    text-align: center;
+    color: var(--text-light);
 }
 
 /* ---------- TERMINAL PANEL (What's Happening) ---------- */
@@ -149,4 +177,9 @@ footer span {
     header h1 { font-size: 2.1rem; }
     nav a { padding: 8px 14px; }
     section { padding: 18px; }
+
+    .intro-section p {
+        font-size: 1rem;
+    }
 }
+
