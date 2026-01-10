@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hardware Assistant Some Tech Dude</title>
+    <style>
+        body { font-family: 'Courier New', monospace; background: #1a1a1a; color: #0f0; padding: 20px; }
+        #chat-box { height: 400px; overflow-y: scroll; border: 1px solid #0f0; padding: 15px; margin-bottom: 10px; background: #000; }
+        input { width: 80%; padding: 10px; background: #000; border: 1px solid #0f0; color: #0f0; }
+        button { padding: 10px; background: #0f0; color: #000; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>[ Some Tech Dude Hardware Agent ]</h1>
+    <div id="chat-box"></div>
+    <input type="text" id="userInput" placeholder="Describe your Rasberry Pi/Arduino problem...">
+    <button onclick="askAI()">SEND</button>
+
+    <script>
+        const proxyUrl = "https://script.google.com/macros/s/AKfycbwbamHAF8hKGvkcKZl9FoNJx8cHRvG8omIfrxFsziYgg76W8N_R2NmTHZZMTWTfZI62/exec";
+
+        async function askAI() {
+            const input = document.getElementById('userInput');
+            const chatBox = document.getElementById('chat-box');
+            if(!input.value) return;
+
+            chatBox.innerHTML += `<div><b>Hobbyist:</b> ${input.value}</div>`;
+            const currentMessage = input.value;
+            input.value = "";
+
+            const response = await fetch(proxyUrl, {
+                method: "POST",
+                body: JSON.stringify({ message: currentMessage })
+            });
+
+            const data = await response.json();
+            const aiText = data.candidates[0].content.parts[0].text;
+            chatBox.innerHTML += `<div style="color: #fff; margin-top: 10px;"><b>Agent:</b> ${aiText}</div><hr>`;
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    </script>
+</body>
+</html>
