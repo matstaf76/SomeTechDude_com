@@ -553,22 +553,6 @@ a.card h3 { color: #fff; }
   gap: .3rem;
 }
 
-/* ---------- TERMINAL / NEWS ---------- */
-.terminal {
-  background: #05090f;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 1.15rem 1.25rem;
-  font-family: var(--font-mono);
-  font-size: .9rem;
-  line-height: 1.7;
-}
-.terminal .prompt { color: var(--lime); user-select: none; flex: none; }
-.terminal a { color: var(--blue); }
-.terminal a:hover { color: var(--blue-bright); text-decoration: underline; }
-.terminal-row { display: flex; gap: .6rem; padding-block: .3rem; }
-.terminal-row + .terminal-row { border-top: 1px solid rgba(255,255,255,.05); }
-
 /* ---------- FORM ---------- */
 .form-shell {
   background: var(--panel);
