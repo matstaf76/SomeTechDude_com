@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Contact | SomeTechDude.com</title>
+<meta name="description" content="Start a conversation about AI consulting, automation, or onsite technology work. Send an inquiry through the form or email sometechdude76@gmail.com directly.">
+<link rel="canonical" href="https://sometechdude.com/contact.html">
+
+<meta name="theme-color" content="#0b1120">
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SomeTechDude.com">
+<meta property="og:url" content="https://sometechdude.com/contact.html">
+<meta property="og:title" content="Contact | SomeTechDude.com">
+<meta property="og:description" content="Tell me what you're trying to fix. First conversation costs nothing.">
+<meta property="og:image" content="https://sometechdude.com/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SomeTechDude.com — AI and technology consulting">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact | SomeTechDude.com">
+<meta name="twitter:description" content="Tell me what you're trying to fix. First conversation costs nothing.">
+<meta name="twitter:image" content="https://sometechdude.com/images/og-image.jpg">
+
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap">
+
+<link rel="stylesheet" href="style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "url": "https://sometechdude.com/contact.html",
+  "name": "Contact SomeTechDude.com",
+  "mainEntity": {
+    "@type": "ProfessionalService",
+    "@id": "https://sometechdude.com/#business",
+    "name": "SomeTechDude.com",
+    "url": "https://sometechdude.com/",
+    "email": "sometechdude76@gmail.com",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "email": "sometechdude76@gmail.com",
+      "availableLanguage": "en"
+    }
+  }
+}
+</script>
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="images/logo.png" width="34" height="34" alt="SomeTechDude.com logo: an S, T and D monogram inside a circle" decoding="async">
+      <span>SomeTechDude<span style="color:var(--blue)">.com</span></span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="experience.html">Experience</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+      <a class="btn btn-primary" href="#contact-form">Start a project</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Contact</p>
+      <h1>Tell me what's broken.</h1>
+      <p class="hero-sub">
+        Or what's slow, or what you suspect could be automated but nobody has had time to
+        look at. I read everything that comes through here, and I answer like a human.
+      </p>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="contact-grid">
+
+        <!-- ---------- FORM ---------- -->
+        <div class="form-shell">
+          <h2 style="font-size:1.4rem;margin-bottom:.4rem">Send an inquiry</h2>
+          <p class="muted" style="margin-bottom:1.4rem">Fields marked <span class="req">*</span> are required.</p>
+
+          <form id="contact-form" novalidate
+                data-endpoint="https://script.google.com/macros/s/AKfycbx-MFrW-iyiJ3TKzfLYEtINYi7AS70PAdqapONJJX003cu_yhSGMkc8xEkAbdqzUU_h4g/exec">
+
+            <div class="field">
+              <label for="name">Name <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="name" required autocomplete="name"
+                     maxlength="200" placeholder="Who am I talking to?">
+            </div>
+
+            <div class="field">
+              <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email"
+                     maxlength="200" placeholder="you@company.com">
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel"
+                     maxlength="60" placeholder="Optional, but faster">
+            </div>
+
+            <div class="field">
+              <label for="message">What do you need? <span class="muted">(optional)</span></label>
+              <textarea id="message" name="message" maxlength="5000"
+                        placeholder="A sentence or two about the problem is plenty. No formal RFP required."></textarea>
+            </div>
+
+            <!-- Honeypot. Left in the DOM on purpose, hidden from humans. -->
+            <div class="hp" aria-hidden="true">
+              <label for="website">Website</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+            </div>
+
+            <button class="btn btn-primary" type="submit" style="width:100%">Send inquiry</button>
+
+            <p class="form-note">
+              Your details are used only to respond to this inquiry. Not shared, not sold,
+              not added to a mailing list.
+            </p>
+
+            <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+
+        <!-- ---------- ASIDE ---------- -->
+        <div class="contact-aside">
+          <article class="card">
+            <h3>Prefer email?</h3>
+            <p>Nothing wrong with that. It goes to the same place.</p>
+            <p style="margin-top:.7rem">
+              <a class="verify" href="mailto:sometechdude76@gmail.com">sometechdude76@gmail.com</a>
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>What happens next</h3>
+            <ul>
+              <li>I read the inquiry and reply, usually within one business day.</li>
+              <li>Short call to understand the actual problem.</li>
+              <li>Honest read on whether I'm the right fit &mdash; including if the answer is no.</li>
+              <li>Scope and pricing before any work starts.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Good reasons to reach out</h3>
+            <ul>
+              <li>You're evaluating AI tools and want a second opinion</li>
+              <li>Something manual is eating hours every week</li>
+              <li>You need onsite hands for an install or cabling run</li>
+              <li>A vendor quoted you a number and it felt wrong</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Coverage</h3>
+            <p>Remote-first and asynchronous-friendly across the United States. Onsite work by arrangement &mdash; have tools, will travel.</p>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <img src="images/logo.png" width="34" height="34" alt="" loading="lazy" decoding="async">
+          <span>SomeTechDude<span style="color:var(--blue)">.com</span></span>
+        </a>
+        <p>Real-use AI &amp; technology consulting. Remote-first, onsite when it counts.</p>
+      </div>
+
+      <div>
+        <h4>Site</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services &amp; pricing</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Elsewhere</h4>
+        <ul class="footer-links">
+          <li><a href="https://myaiworker.online" target="_blank" rel="noopener">MyAIworker.online</a></li>
+          <li><a href="mailto:sometechdude76@gmail.com">sometechdude76@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> SomeTechDude.com &mdash; or whenever, in whatever calendar system. All rights reserved.</p>
+      <p class="quip">Powered by caffeine, stubbornness and The Shwartz.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js" defer></script>
+</body>
+</html>
