@@ -597,7 +597,7 @@ a.card h3 { color: #fff; }
   padding: .8rem .9rem;
   transition: border-color .18s var(--ease), box-shadow .18s var(--ease);
 }
-.field input::placeholder, .field textarea::placeholder { color: #6b7a94; }
+.field input::placeholder, .field textarea::placeholder { color: #7784a0; }
 .field input:focus, .field textarea:focus {
   outline: none;
   border-color: var(--blue);
