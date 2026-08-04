@@ -1,0 +1,225 @@
+{
+  "id": "short-13-ten-dollars",
+  "title": "The $10 Decision",
+  "subtype": "image-story",
+  "series": "kids-money",
+  "audience": "ages 5+",
+  "composition": "Short13Dollars",
+  "format": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "durationSec": 143
+  },
+  "voiceStatus": "pending: ElevenLabs unreachable in this container",
+  "notes": "Storyboard pass. 17 beats from the supplied 17-page script, one beat per page. `text` = clean caption, `tts` = same line with v3 delivery tags. `words` is EMPTY on purpose: per-word caption timing comes from ElevenLabs word timestamps via tools/gen_voice.py, which cannot run here. start/end windows are estimates at 2.25 words/sec + 0.7s breath and will be re-fitted to the real VO. Beat 17 is framed to match beat 1 so the short loops seamlessly; no CTA outro.",
+  "lesson": "Knowing what's a trap changes everything.",
+  "vo": [
+    {
+      "beat": "hook-bigday",
+      "text": "Jake and Maya are cousins, and today is a very big day.",
+      "tts": "[warmly] Jake and Maya are cousins, and today is a very big day.",
+      "start": 0.0,
+      "end": 6.0,
+      "words": []
+    },
+    {
+      "beat": "fieldtrip",
+      "text": "Their class is going on a field trip to the bank!",
+      "tts": "[cheerfully] Their class is going on a field trip to the bank!",
+      "start": 6.0,
+      "end": 11.6,
+      "words": []
+    },
+    {
+      "beat": "giftcard",
+      "text": "Grandma gives them each a shiny ten-dollar gift card. “This is your lunch money — the rest is yours to choose.”",
+      "tts": "[warmly] Grandma gives them each a shiny ten-dollar gift card. “This is your lunch money — the rest is yours to choose.”",
+      "start": 11.6,
+      "end": 21.2,
+      "words": []
+    },
+    {
+      "beat": "arrive-city",
+      "text": "The school bus rolls into Fairweather, the city of money.",
+      "tts": "[curiously] The school bus rolls into Fairweather, the city of money.",
+      "start": 21.2,
+      "end": 26.3,
+      "words": []
+    },
+    {
+      "beat": "bank-wonder",
+      "text": "Inside, the bank sparkles like a museum of gold and glass.",
+      "tts": "[in awe] Inside, the bank sparkles like a museum of gold and glass.",
+      "start": 26.3,
+      "end": 31.9,
+      "words": []
+    },
+    {
+      "beat": "iron-banker",
+      "text": "A kind banker with a gray beard waves hello — the Iron Banker! He wears deep purple and gold armor — like the most important suit in the world.",
+      "tts": "[warmly] A kind banker with a gray beard waves hello — the Iron Banker! He wears deep purple and gold armor — like the most important suit in the world.",
+      "start": 31.9,
+      "end": 44.6,
+      "words": []
+    },
+    {
+      "beat": "temptation-shop",
+      "text": "On the way to the tour, they pass a shop full of toys and candy.",
+      "tts": "[curiously] On the way to the tour, they pass a shop full of toys and candy.",
+      "start": 44.6,
+      "end": 52.0,
+      "words": []
+    },
+    {
+      "beat": "vault",
+      "text": "The Iron Banker shows them a giant vault stacked with coins.",
+      "tts": "[in awe] The Iron Banker shows them a giant vault stacked with coins.",
+      "start": 52.0,
+      "end": 57.6,
+      "words": []
+    },
+    {
+      "beat": "hunger",
+      "text": "Soon their tummies rumble — it's time for lunch!",
+      "tts": "[playfully] Soon their tummies rumble — it's time for lunch!",
+      "start": 57.6,
+      "end": 61.9,
+      "words": []
+    },
+    {
+      "beat": "price-shock",
+      "text": "At the food counter, a sandwich costs more than Jake expected. Maya counts her money again and again, but the numbers won't come out right.",
+      "tts": "[worried] At the food counter, a sandwich costs more than Jake expected. Maya counts her money again and again, but the numbers won't come out right.",
+      "start": 61.9,
+      "end": 73.7,
+      "words": []
+    },
+    {
+      "beat": "the-swipe",
+      "text": "Then something crackles strangely beside the candy rack. It's The Swipe — a shimmer that makes things look too good to pass up!",
+      "tts": "[mysteriously] Then something crackles strangely beside the candy rack. It's The Swipe — a shimmer that makes things look too good to pass up!",
+      "start": 73.7,
+      "end": 84.2,
+      "words": []
+    },
+    {
+      "beat": "jack-ruiner",
+      "text": "And hiding behind the high food prices stands Jack the Ruiner.",
+      "tts": "[ominously] And hiding behind the high food prices stands Jack the Ruiner.",
+      "start": 84.2,
+      "end": 89.8,
+      "words": []
+    },
+    {
+      "beat": "naming-1",
+      "text": "“You can see them now,” the Iron Banker says gently. “Most grown-ups can see them too, once they know to look.”",
+      "tts": "[gently] “You can see them now,” the Iron Banker says gently. “Most grown-ups can see them too, once they know to look.”",
+      "start": 89.8,
+      "end": 99.8,
+      "words": []
+    },
+    {
+      "beat": "naming-2",
+      "text": "“The Swipe makes you want things fast, and Jack hides sneaky high prices. Just knowing their names takes away some of their power!”",
+      "tts": "[confidently] “The Swipe makes you want things fast, and Jack hides sneaky high prices. Just knowing their names takes away some of their power!”",
+      "start": 99.8,
+      "end": 110.7,
+      "words": []
+    },
+    {
+      "beat": "lunch-gift",
+      "text": "Then the Iron Banker claps his hands and grins a big grin. “Lunch is on me today — it makes me happy to see kids eat!”",
+      "tts": "[cheerfully] Then the Iron Banker claps his hands and grins a big grin. “Lunch is on me today — it makes me happy to see kids eat!”",
+      "start": 110.7,
+      "end": 122.5,
+      "words": []
+    },
+    {
+      "beat": "cheer",
+      "text": "The whole class cheers as trays of food are passed down the table.",
+      "tts": "[excited] The whole class cheers as trays of food are passed down the table.",
+      "start": 122.5,
+      "end": 129.0,
+      "words": []
+    },
+    {
+      "beat": "payoff-loop",
+      "text": "“Now,” says the Iron Banker with a wink, “let's talk about saving your money — right after lunch!” When you know the name of a trap, it loses its power.",
+      "tts": "[warmly] “Now,” says the Iron Banker with a wink, “let's talk about saving your money — right after lunch!” When you know the name of a trap, it loses its power.",
+      "start": 129.0,
+      "end": 142.6,
+      "words": []
+    }
+  ],
+  "images": [
+    {
+      "beat": "hook-bigday",
+      "prompt": "Jake and Maya side by side, morning light, backpacks on"
+    },
+    {
+      "beat": "fieldtrip",
+      "prompt": "The yellow school bus pulling up outside school"
+    },
+    {
+      "beat": "giftcard",
+      "prompt": "Grandma pressing a shiny gift card into each small hand"
+    },
+    {
+      "beat": "arrive-city",
+      "prompt": "Bus rolling into Fairweather — tall glass towers, coin motifs"
+    },
+    {
+      "beat": "bank-wonder",
+      "prompt": "Bank interior like a museum — gold, glass, high ceilings"
+    },
+    {
+      "beat": "iron-banker",
+      "prompt": "The Iron Banker waving — gray beard, deep purple and gold armor"
+    },
+    {
+      "beat": "temptation-shop",
+      "prompt": "Shop window crammed with toys and candy, kids slowing down"
+    },
+    {
+      "beat": "vault",
+      "prompt": "Giant vault door open, coins stacked to the ceiling"
+    },
+    {
+      "beat": "hunger",
+      "prompt": "Jake's hand on his tummy, Maya laughing"
+    },
+    {
+      "beat": "price-shock",
+      "prompt": "Food counter menu board; Maya recounting her card, brow furrowed"
+    },
+    {
+      "beat": "the-swipe",
+      "prompt": "A shimmer crackling beside the candy rack — too-good-to-resist glow"
+    },
+    {
+      "beat": "jack-ruiner",
+      "prompt": "Jack the Ruiner half-hidden behind the high price board"
+    },
+    {
+      "beat": "naming-1",
+      "prompt": "Iron Banker kneeling to the kids' eye level, calm and kind"
+    },
+    {
+      "beat": "naming-2",
+      "prompt": "Split frame: The Swipe labelled, Jack labelled — both dimming"
+    },
+    {
+      "beat": "lunch-gift",
+      "prompt": "Iron Banker clapping, huge grin, trays appearing"
+    },
+    {
+      "beat": "cheer",
+      "prompt": "Whole class cheering, trays passed down a long table"
+    },
+    {
+      "beat": "payoff-loop",
+      "prompt": "Iron Banker winking; Jake and Maya grinning — matches beat 1 framing"
+    }
+  ]
+}
