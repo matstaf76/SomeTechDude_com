@@ -72,7 +72,12 @@ const WINDOWS = PAGES.map((p, i) => {
 // ART SLOT — stands in for the finished illustration. Gentle ken-burns drift and
 // a breathing glyph so the page feels alive rather than static.
 // =============================================================================
-const ArtSlot: React.FC<{ page: Page; local: number; span: number }> = ({ page, local, span }) => {
+const ArtSlot: React.FC<{ page: Page; local: number; span: number; content: number }> = ({
+  page,
+  local,
+  span,
+  content,
+}) => {
   const t = Math.max(1, span);
   const drift = interpolate(local, [0, t], [0, 1], CLAMP);
   const scale = 1.04 + drift * 0.06;
@@ -105,6 +110,7 @@ const ArtSlot: React.FC<{ page: Page; local: number; span: number }> = ({ page, 
           textAlign: 'center',
           fontSize: 400,
           lineHeight: 1,
+          opacity: content,
           transform: `translateY(${floatY}px) scale(${pop})`,
         }}
       >
@@ -118,8 +124,8 @@ const ArtSlot: React.FC<{ page: Page; local: number; span: number }> = ({ page, 
 // PAGE CHROME — page number, beat name, cast. Review furniture: it tells you
 // which art each slot is waiting on. Delete this block for the finished cut.
 // =============================================================================
-const Chrome: React.FC<{ page: Page; local: number }> = ({ page, local }) => {
-  const enter = interpolate(local, [0, 14], [0, 1], { ...CLAMP, easing: EASINGS.easeOut });
+const Chrome: React.FC<{ page: Page; local: number; content: number }> = ({ page, local, content }) => {
+  const enter = interpolate(local, [0, 14], [0, 1], { ...CLAMP, easing: EASINGS.easeOut }) * content;
   const chip: React.CSSProperties = {
     display: 'inline-block',
     padding: '10px 22px',
@@ -212,10 +218,21 @@ const Short13Dollars: React.FC = () => {
         const fadeIn = i === 0 ? 1 : interpolate(frame, [page.from - XF, page.from + XF], [0, 1], CLAMP);
         const fadeOut = next ? interpolate(frame, [end - XF * 2, end], [1, 0], CLAMP) : 1;
 
+        // The backdrop cross-dissolves, but glyph and chrome cut in and out inside the page's
+        // OWN window. Without this the labels dissolve across each other and a transition
+        // frame reads "PAGE 01" over page 2's art, with both glyphs superimposed.
+        const own = next ? next.from : durationInFrames;
+        const content = i === 0
+          ? interpolate(frame, [own - 8, own], [1, 0], CLAMP)
+          : Math.min(
+              interpolate(frame, [page.from, page.from + 8], [0, 1], CLAMP),
+              next ? interpolate(frame, [own - 8, own], [1, 0], CLAMP) : 1,
+            );
+
         return (
           <AbsoluteFill key={page.beat} style={{ opacity: Math.min(fadeIn, fadeOut) }}>
-            <ArtSlot page={page} local={local} span={span} />
-            <Chrome page={page} local={local} />
+            <ArtSlot page={page} local={local} span={span} content={content} />
+            <Chrome page={page} local={local} content={content} />
           </AbsoluteFill>
         );
       })}
