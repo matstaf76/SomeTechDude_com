@@ -6,6 +6,7 @@
 // Rendered at scale 2 (author 1080p -> 4K output) to composite crisply over the 4K master.
 import { bundle } from '@remotion/bundler';
 import { selectComposition, renderMedia, renderStill } from '@remotion/renderer';
+import { browserExecutable } from './browser.mjs';
 import { readFileSync, mkdirSync } from 'fs';
 import { fileURLToPath } from 'url';
 import path from 'path';
@@ -29,12 +30,12 @@ const serveUrl = await bundle({ entryPoint: path.join(root, 'src', 'index.ts'), 
 let n = 0;
 for (const shot of manifest) {
   if (onlyIds.length && !onlyIds.includes(shot.id)) continue;
-  const composition = await selectComposition({ serveUrl, id: shot.id });
+  const composition = await selectComposition({ serveUrl, id: shot.id, browserExecutable });
 
   if (stillMode) {
     const out = path.join(outDir, `${shot.id}.png`);
     await renderStill({
-      serveUrl, composition, output: out, scale: SCALE, overwrite: true,
+      serveUrl, composition, output: out, scale: SCALE, overwrite: true, browserExecutable,
       frame: Math.floor(composition.durationInFrames * 0.6),
       imageFormat: shot.transparent ? 'png' : 'jpeg',
     });
@@ -43,7 +44,7 @@ for (const shot of manifest) {
     const transparent = !!shot.transparent;
     const out = path.join(outDir, `${shot.id}.${transparent ? 'mov' : 'mp4'}`);
     await renderMedia({
-      serveUrl, composition, outputLocation: out, scale: SCALE, overwrite: true,
+      serveUrl, composition, outputLocation: out, scale: SCALE, overwrite: true, browserExecutable,
       codec: transparent ? 'prores' : 'h264',
       proResProfile: transparent ? '4444' : undefined,
       pixelFormat: transparent ? 'yuva444p10le' : 'yuv420p',
